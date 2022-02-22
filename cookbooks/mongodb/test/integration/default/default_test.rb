@@ -3,14 +3,18 @@
 # The Chef InSpec reference, with examples and extensive documentation, can be
 # found at https://docs.chef.io/inspec/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+# Test MongoDB yum repo config
+describe file('/etc/yum.repos.d/MongoDB_Repository.repo') do
+  it { should exist }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+# Test MongoDB installation
+describe package('mongodb-org') do 
+  it { should be_installed}
 end
+
+# Test MongoDB service has started
+describe service('mongod') do 
+  it { should be_enabled }
+  it { should be_running }
+end 
