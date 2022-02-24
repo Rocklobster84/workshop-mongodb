@@ -9,12 +9,12 @@ describe file('/etc/yum.repos.d/MongoDB_Repository.repo') do
 end
 
 # Test MongoDB installation
-describe package('mongodb-org') do 
-  it { should be_installed}
+describe package('mongodb-org') do
+  it { should be_installed }
 end
 
 # Test MongoDB service has started
-describe service('mongod') do 
+describe service('mongod') do
   it { should be_enabled }
   it { should be_running }
-end 
+end

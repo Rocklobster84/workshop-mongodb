@@ -13,4 +13,4 @@ yum_repository 'mongoDB' do
   enabled true
   gpgkey 'https://www.mongodb.org/static/pgp/server-4.2.asc'
   action :create
-  end
+end

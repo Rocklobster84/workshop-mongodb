@@ -6,5 +6,5 @@
 
 # Starts the mongod service
 service 'mongod' do
-  action [:enable,:start]
+  action [:enable, :start]
 end
