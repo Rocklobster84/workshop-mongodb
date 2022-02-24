@@ -4,7 +4,7 @@
 #
 # Copyright:: 2022, Stephanie Thompson, All Rights Reserved.
 
-# Checks for 64 bit version, creates a yum repo file for installing MongoDB
+# Creates a yum repo file for installing MongoDB
 
 yum_repository 'mongoDB' do
   name 'MongoDB_Repository'
