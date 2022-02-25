@@ -4,7 +4,7 @@
 # found at https://docs.chef.io/inspec/resources/
 
 # Test MongoDB yum repo config
-describe file('/etc/yum.repos.d/MongoDB_Repository.repo') do
+describe file('/etc/yum.repos.d/mongodb.repo') do
   it { should exist }
 end
 
